@@ -8,8 +8,10 @@ import BalagForm from './BalagForm'
 class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <BalagForm />
+      <div className='App container'>
+        <div className='container-fluid'>
+          <BalagForm />
+        </div>
         <pre>{JSON.stringify(this.props.dataStore.formData, null, 2)}</pre>
       </div>
     )
