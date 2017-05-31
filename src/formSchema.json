@@ -11,7 +11,7 @@
     },
     "ward": {
       "title": "ওয়ার্ড",
-      "type": "number",
+      "type": "integer",
       "enum": [
         1,
         2,
@@ -185,11 +185,11 @@
     },
     "number-of-homes": {
       "title": "বসত বাড়ির পরিমাণ",
-      "type": "number"
+      "type": "integer"
     },
     "home-cost": {
       "title": "বসত বাড়ির মূল্য",
-      "type": "number"
+      "type": "integer"
     },
     "latrine": {
       "title": "ল্যাট্রিন",
@@ -234,7 +234,7 @@
       },
       "uniqueItems": true
     },
-    "land-percentage": {
+    "land-amount": {
       "title": "জমির পরিমাণ শতাংশে",
       "type": "object",
       "properties": {
@@ -278,31 +278,31 @@
       "properties": {
         "goru": {
           "title": "গরু",
-          "type": "number"
+          "type": "integer"
         },
         "mohish": {
           "title": "মহিষ",
-          "type": "number"
+          "type": "integer"
         },
-        "vera": {
+        "bhera": {
           "title": "ভেড়া",
-          "type": "number"
+          "type": "integer"
         },
         "chagol": {
           "title": "ছাগল",
-          "type": "number"
+          "type": "integer"
         },
         "murgi": {
           "title": "মুরগী",
-          "type": "number"
+          "type": "integer"
         },
         "hash": {
           "title": "হাঁস",
-          "type": "number"
+          "type": "integer"
         },
         "onnanno": {
           "title": "অন্যান্য",
-          "type": "number"
+          "type": "integer"
         }
       }
     },
@@ -361,21 +361,16 @@
     },
     "mamla": {
       "title": "মামলা",
-      "type": "object",
-      "properties": {
-        "deoani": {
-          "title": "দেওয়ানী মামলা",
-          "type": "boolean"
-        },
-        "foujdari": {
-          "title": "ফৌজদারী মামলা",
-          "type": "boolean"
-        },
-        "help": {
-          "title": "সহায়তা পেয়েছে",
-          "type": "boolean"
-        }
-      }
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "দেওয়ানী মামলা",
+          "ফৌজদারী মামলা",
+          "সহায়তা পেয়েছে"
+        ]
+      },
+      "uniqueItems": true
     },
     "orphan": {
       "title": "এতিম শিশু",
@@ -387,7 +382,7 @@
         },
         "age": {
           "title": "বয়স",
-          "type": "number"
+          "type": "integer"
         },
         "no-dad": {
           "title": "পিতৃ হারা",
@@ -417,7 +412,7 @@
         },
         "age": {
           "title": "বয়স",
-          "type": "number"
+          "type": "integer"
         },
         "address": {
           "title": "ঠিকানা",
@@ -433,7 +428,7 @@
         }
       }
     },
-    "kota-info": {
+    "quota-info": {
       "title": "অন্যান্য",
       "type": "object",
       "properties": {
@@ -459,7 +454,7 @@
         },
         "how-many-votes": {
           "title": "হলে ভোট সংখ্যা কত",
-          "type": "number"
+          "type": "integer"
         }
       }
     }

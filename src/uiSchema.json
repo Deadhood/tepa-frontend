@@ -48,6 +48,7 @@
     }
   },
   "maid": {
+    "classNames": "form-inline",
     "gender": {
       "ui:widget": "radio",
       "ui:options": {
@@ -79,6 +80,12 @@
       "inline": true
     }
   },
+  "mamla": {
+    "ui:widget":"checkboxes",
+    "ui:options": {
+      "inline": true
+    }
+  },
   "car-info": {
     "cars": {
       "ui:widget": "checkboxes",
@@ -86,5 +93,14 @@
         "inline": true
       }
     }
+  },
+  "land-amount": {
+    "classNames": "form-inline"
+  },
+  "cattle": {
+    "classNames": "form-inline"
+  },
+  "kitnashok": {
+    "classNames": "form-inline"
   }
 }

@@ -6,7 +6,7 @@ import App from './App'
 import DataStore from './DataStore'
 import registerServiceWorker from './registerServiceWorker'
 
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootswatch/paper/bootstrap.css'
 import './index.css'
 
 ReactDOM.render(
