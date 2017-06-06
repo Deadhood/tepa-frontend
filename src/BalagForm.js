@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Form from 'react-jsonschema-form'
 import { inject, observer } from 'mobx-react'
 
-import formSchema from './formSchema.json'
-import uiSchema from './uiSchema.json'
+import formSchema from './Schema.Data'
+import uiSchema from './Schema.UI'
 
 class BalagForm extends Component {
   render () {
