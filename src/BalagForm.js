@@ -32,7 +32,8 @@ class BalagForm extends Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.props.dataStore.formData)
+      body: JSON.stringify(this.props.dataStore.formData),
+      credentials: 'same-origin'
     })
       .then(res => {
         if (res.status === 200) {
