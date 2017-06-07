@@ -3,7 +3,8 @@ import { extendObservable } from 'mobx'
 export default class DataStore {
   constructor () {
     extendObservable(this, {
-      formData: null
+      formData: null,
+      message: null
     })
   }
 }

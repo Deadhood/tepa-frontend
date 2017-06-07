@@ -6,6 +6,11 @@ import formSchema from './Schema.Data'
 import uiSchema from './Schema.UI'
 
 class BalagForm extends Component {
+  constructor (props) {
+    super(props)
+    this.submitData = this.submitData.bind(this)
+  }
+
   render () {
     return (
       <Form
@@ -18,6 +23,25 @@ class BalagForm extends Component {
 
   _handleSubmit (data) {
     this.props.dataStore.formData = data.formData
+    this.submitData()
+  }
+
+  submitData () {
+    window.fetch('/add', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.props.dataStore.formData)
+    })
+      .then(res => {
+        if (res.status === 200) {
+          this.props.dataStore.message = 'Success'
+        } else {
+          this.props.dataStore.message = 'Failed'
+        }
+        document.body.scrollTop = 0
+      })
   }
 }
 

@@ -6,3 +6,7 @@ body {
   font-family: Mukti, Roboto, sans-serif;
   font-size: 18px;
 }
+
+label {
+  color: #0c7cd6;
+}

@@ -10,9 +10,9 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='container-fluid'>
+          <div className='well'>{this.props.dataStore.message}</div>
           <BalagForm />
         </div>
-        <pre>{JSON.stringify(this.props.dataStore.formData, null, 2)}</pre>
       </div>
     )
   }
