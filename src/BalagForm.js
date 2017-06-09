@@ -38,6 +38,7 @@ class BalagForm extends Component {
       .then(res => {
         if (res.status === 200) {
           this.props.dataStore.message = 'Success'
+          document.querySelectorAll('input').forEach((n)=>n.value='')
         } else {
           this.props.dataStore.message = 'Failed'
         }
