@@ -1,7 +1,7 @@
 export default {
   title: 'টেপা',
   type: 'object',
-  required: ['graam'],
+  required: ['graam', 'holding-number', 'poribar-prodhan', 'pita-shami', 'mom'],
   properties: {
     graam: {
       title: 'গ্রাম',
