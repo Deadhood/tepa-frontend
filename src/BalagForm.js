@@ -23,10 +23,10 @@ class BalagForm extends Component {
 
   _handleSubmit (data) {
     this.props.dataStore.formData = data.formData
-    this.submitData()
+    this.submitData(data)
   }
 
-  submitData () {
+  submitData (data) {
     window.fetch('/add', {
       method: 'post',
       headers: {
@@ -38,7 +38,7 @@ class BalagForm extends Component {
       .then(res => {
         if (res.status === 200) {
           this.props.dataStore.message = 'Success'
-          document.querySelectorAll('input').forEach((n)=>n.value='')
+          data.formData = {}
         } else {
           this.props.dataStore.message = 'Failed'
         }
