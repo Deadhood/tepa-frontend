@@ -9,7 +9,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-jsonschema-form": "^1.6.1",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "react-scripts": "3.0.1"
